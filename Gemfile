@@ -49,3 +49,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # add rspec for unit testing
 gem 'rspec-rails'
+
+# add devise for user profile
+gem 'devise'
