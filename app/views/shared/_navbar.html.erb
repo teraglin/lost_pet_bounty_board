@@ -7,6 +7,10 @@
             <li>
                 <%= link_to 'Register', user_registration_path, method: :create %>
             </li>
+        <% else %>
+            <li>
+                <span>Welcome <%= current_user.email %></span>
+            </li>
         <% end %>
 
         <%# will have to change class: %>
