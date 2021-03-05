@@ -44,7 +44,7 @@ ActiveRecord::Schema.define(version: 2021_03_05_003926) do
   end
 
   create_table "listings", force: :cascade do |t|
-    t.string "title"
+    t.string "title", null: :false
     t.text "description"
     t.integer "bounty"
     t.boolean "completed"
