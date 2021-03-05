@@ -20,5 +20,10 @@
   <%= @listing.completed %>
 </p>
 
+<p>
+  <strong>image</strong>
+  <%= image_tag @listing.image %>
+</p>
+
 <%= link_to 'Edit', edit_listing_path(@listing) %> |
 <%= link_to 'Back', listings_path %>
