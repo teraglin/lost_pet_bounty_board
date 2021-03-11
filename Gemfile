@@ -52,3 +52,8 @@ gem 'rspec-rails'
 
 # add devise for user profile
 gem 'devise'
+
+#add cloudinary for images
+gem 'cloudinary'
+
+gem 'activestorage-cloudinary-service'
