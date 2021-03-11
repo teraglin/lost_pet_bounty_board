@@ -8,5 +8,6 @@ class User < ApplicationRecord
   # validations
   validates :email, uniqueness: true
   validates :username, uniqueness: true
-  # has_many :listings
+
+  has_many :listings  
 end
