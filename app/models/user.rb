@@ -8,6 +8,7 @@ class User < ApplicationRecord
   # validations
   validates :email, uniqueness: true
   validates :username, uniqueness: true
+  validates :username, presence: true
 
   has_many :listings
 end
