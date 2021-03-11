@@ -5,6 +5,7 @@ class CreateListings < ActiveRecord::Migration[6.1]
       t.text :description
       t.integer :bounty
       t.boolean :completed
+      t.date :lost_date
 
       t.timestamps
     end
