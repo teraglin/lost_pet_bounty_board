@@ -1,29 +1,28 @@
-nav {
-  display: flex;
+// nav {
+//   display: flex;
 
 
-}
+// }
 
 body {
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: #C0E0E0;
+  // box-sizing: border-box;
+  // display: flex;
+  // flex-direction: column;
+  // align-items: center;
+  // justify-content: center;
+  background-color: #eee;
   color: #333;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  border: red 1px solid;
+  // width: 100%;
+  // border: red 1px solid;
   
 
-  .listings_container {
-      background-color: #E0E0E0;
-      display: flex;
-      width: 90%;
-      margin: none;
-      padding: none;
-  }
+  // .listings_container {
+  //     background-color: #E0E0E0;
+  //     display: flex;
+  //     width: 90%;
+  //     margin: none;
+  //     padding: none;
+  // }
 }
 
 body, p, ol, ul, td {

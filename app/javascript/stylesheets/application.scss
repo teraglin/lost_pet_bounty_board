@@ -1,0 +1,52 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+
+/*! purgecss start ignore */
+@import "components/buttons";
+h1 {
+    @apply text-xl ;
+}
+
+nav {
+    @apply z-50 fixed top-0 h-20 w-screen px-20 bg-white text-black shadow-md ;
+}
+
+.nav_container {
+    @apply py-8 flex flex-row items-center justify-between ;
+
+    #nav_left {
+        @apply items-start ;
+        // align-items: flex-start;
+    }
+    
+    #nav_center {
+        @apply items-center ;
+    }
+    
+    #nav_right {
+        @apply flex flex-row justify-between items-end ;
+    }
+}
+
+body {
+    @apply min-h-screen w-screen py-20 flex flex-col items-center bg-white text-gray-500 ;
+}
+
+.listings_container {
+    @apply w-4/5 px-10 py-20 h-screen bg-green-800 bg-opacity-50 text-white shadow-md ;
+    // width: 80%;
+}
+
+.field {
+    @apply border-2 w-full bg-green-800 bg-opacity-50 text-white ;
+
+    .input_field {
+        @apply w-full bg-green-800 bg-opacity-50 ;
+    }
+}
+
+
+
+/*! purgecss end ignore */
+
+@import "tailwindcss/utilities";
