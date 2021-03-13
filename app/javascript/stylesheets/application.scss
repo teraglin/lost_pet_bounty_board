@@ -2,7 +2,7 @@
 @import "tailwindcss/components";
 
 /*! purgecss start ignore */
-/*! purgecss end ignore */
+
 @import "components/buttons";
 h1 {
     @apply text-xl ;
@@ -17,7 +17,6 @@ nav {
 
     #nav_left {
         @apply items-start ;
-        // align-items: flex-start;
     }
     
     #nav_center {
@@ -46,6 +45,7 @@ body {
     }
 }
 
+/*! purgecss end ignore */
 
 
 
