@@ -2,6 +2,7 @@
 @import "tailwindcss/components";
 
 /*! purgecss start ignore */
+/*! purgecss end ignore */
 @import "components/buttons";
 h1 {
     @apply text-xl ;
@@ -47,6 +48,6 @@ body {
 
 
 
-/*! purgecss end ignore */
+
 
 @import "tailwindcss/utilities";
