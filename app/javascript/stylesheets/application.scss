@@ -29,11 +29,11 @@ nav {
 }
 
 body {
-    @apply min-h-screen w-screen py-20 flex flex-col items-center bg-white text-gray-500 ;
+    @apply flex flex-col h-screen w-screen py-20 items-center bg-white text-gray-700 ;
 }
 
-.listings_container {
-    @apply w-4/5 px-10 py-20 h-screen bg-green-800 bg-opacity-50 text-white shadow-md ;
+.color_container {
+    @apply w-4/5 px-10 py-20 h-screen bg-green-800 bg-opacity-50 shadow-md ;
     // width: 80%;
 }
 
