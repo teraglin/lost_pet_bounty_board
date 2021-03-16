@@ -1,4 +1,4 @@
 .btn {
-    @apply px-3 py-2 text-base text-gray-800 bg-white border rounded ;
-    border: 1px gray solid;
+    @apply w-32 py-2 px-3 text-white rounded-lg transition duration-200 ease-in-out bg-gray-600 hover:bg-white hover:text-gray-700 hover:scale-100 ;
+
 }

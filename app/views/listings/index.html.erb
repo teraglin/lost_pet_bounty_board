@@ -2,13 +2,38 @@
 
 <div class="color_container border-red">
   <p id="notice"><%= notice %></p>
-  <h1>Listings</h1>
 
-  <%# <% @listing.each do |listing| %>
-    <%# <div class="listings-card"> %>
-    <%# </div> %>
-  <%# <% end %>
+  <% if user_signed_in? %>
+    <%= link_to 'Make a Bounty', new_listing_path, class:'btn flex w-44 justify-center' %>
+  <% end %>
 
+  <br>
+  <div class="flex flex-row flex-wrap justify-evenly">
+    <%= @listings.each do |listing| %>
+      <div class="listings_card">
+        <% if listing.completed? %>
+          <span class="card_title bg-green-200"><%= listing.title %></span>
+        <% else %>
+          <span class="card_title bg-red-200"><%= listing.title %></span>
+        <% end %>
+        <%= image_tag listing.image, class: 'card_image' %>
+        <span class="card_date" ><%= listing.lost_date %></span>
+        <span class="card_description"><%= listing.description %></span>
+        <span class="card_username"><%= listing.user.username %></span>
+        <div class="flex justify-evenly">
+          <span><%= link_to 'Show', listing %></span>
+          <% if user_signed_in? %>
+            <% if listing.user.username == current_user.username %>
+              <span><%= link_to 'Edit', edit_listing_path(listing) %></span>
+              <span><%= link_to 'Destroy', listing, method: :delete, data: { confirm: 'Are you sure?' } %></span>
+            <% end %>
+          <% end %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+
+<!--
   <table>
     <thead>
       <tr>
@@ -31,15 +56,11 @@
           <td><%= listing.completed %></td>
           <td><%= image_tag listing.image %></td>
           <td><%= listing.user.username %></td>
-          <td><%= link_to 'Show', listing %></td>
-          <td><%= link_to 'Edit', edit_listing_path(listing) %></td>
-          <td><%= link_to 'Destroy', listing, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          
         </tr>
       <% end %>
     </tbody>
   </table>
 
-  <br>
-
-  <%= link_to 'New Listing', new_listing_path %>
+-->
 </div>
