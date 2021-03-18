@@ -4,6 +4,8 @@
 
   <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
 
+  <%= render "devise/shared/error_messages", resource: resource %>
+
   <!-- EMAIL SIGN IN 
     <div class="field">
       <%= f.label :email %><br />

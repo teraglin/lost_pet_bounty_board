@@ -33,10 +33,11 @@
 
   <div class="field">
     <%= form.label :image %>
-    <%= form.file_field :image %>
+    <%= form.file_field :image, class: 'w-full' %>
   </div>
 
   <div class="actions">
-    <%= form.submit class: 'btn' %>
+    <%= form.submit class: 'btn bg-green-700 hover:text-green-700' %>
   </div>
+
 <% end %>
