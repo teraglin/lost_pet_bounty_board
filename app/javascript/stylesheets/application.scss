@@ -1,8 +1,11 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+
 
 
 /*! purgecss start ignore */
-@import "tailwindcss/base";
-@import "tailwindcss/components";
+
+
 
 @import "components/buttons";
 
@@ -109,9 +112,9 @@ body {
 
 }
 
-@import "tailwindcss/utilities";
+
 /*! purgecss end ignore */
 
-
+@import "tailwindcss/utilities";
 
 
