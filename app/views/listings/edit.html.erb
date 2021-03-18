@@ -1,6 +1,13 @@
-<h1>Editing Listing</h1>
+<div class="form_container py-10" >
 
-<%= render 'form', listing: @listing %>
+    <h1 class="text-gray-700">EDIT BOUNTY</h1>
+    
+    <%= render 'form', listing: @listing %>
+    
+    <%= link_to 'Back', @listing, class: 'btn mt-5 text-center w-20 bg-red-700 hover:text-red-700' %>
 
-<%= link_to 'Show', @listing %> |
-<%= link_to 'Back', listings_path %>
+</div>
+
+
+
+
