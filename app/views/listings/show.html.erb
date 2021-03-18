@@ -1,34 +1,33 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @listing.title %>
-</p>
+<div class="show_container">
+  <div class="show_header">
+    
 
-<p>
-  <strong>Description:</strong>
-  <%= @listing.description %>
-</p>
+    <div class="heading_box_1">
+      <%= image_tag @listing.image, class: 'show_image' %>
+    </div>
 
-<p>
-  <strong>Lost date/time:</strong>
-  <%= @listing.lost_date %>
-</p>
+    <div class="heading_box_2">
+      <h2><%= @listing.title %></h2>
+      <span>Posted by <strong><%= @listing.user.username %></strong></span>
+      <% if @listing.completed %>
+        <span class="text-center bg-gradient-to-r from-green-500 to-green-400">COMPLETED</span>
+      <% else %>
+        <span class="text-center bg-gradient-to-r from-red-500 to-red-400">PENDING COMPLETION</span>
+      <% end %>
+      <span>Disappeared at <%= @listing.lost_date %></span>
+    </div>
 
-<p>
-  <strong>Completed:</strong>
-  <%= @listing.completed %>
-</p>
+  </div>
+  <div class="show_body">
+    <p>
+      <%= @listing.description %>
+    </p>
+  </div>
+</div>
 
-<p>
-  <strong>image</strong>
-  <%= image_tag @listing.image %>
-</p>
-
-<p>
-  <strong>Posted by</strong>
-  <%= @listing.user.username %>
-</p>
-
-<%= link_to 'Edit', edit_listing_path(@listing) %> |
-<%= link_to 'Back', listings_path %>
+<div class="flex flex-row">
+  <%= link_to 'Edit', edit_listing_path(@listing), class: 'btn mt-5 mr-2 text-center w-20 bg-blue-700 hover:text-blue-700' %>
+  <%= link_to 'Back', listings_path, class: 'btn mt-5 ml-2 text-center w-20 bg-red-700 hover:text-red-700' %>
+</div>

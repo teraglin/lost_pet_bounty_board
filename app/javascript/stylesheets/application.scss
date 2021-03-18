@@ -5,26 +5,30 @@
 
 @import "components/buttons";
 h1 {
-    @apply text-xl ;
+    @apply text-sm md:text-xl ;
+}
+
+h2 {
+    @apply text-lg font-bold uppercase ;
 }
 
 nav {
-    @apply flex items-center justify-center z-50 fixed top-0 h-20 w-screen px-20 bg-white text-black shadow-md ;
+    @apply flex px-10 items-center justify-center z-50 fixed top-0 h-20 w-screen bg-white text-black shadow-md lg:px-20 ;
 }
 
 .nav_container {
     @apply w-screen flex flex-row items-center justify-center ;
 
     #nav_left {
-        @apply items-start w-1/6 ;
+        @apply items-start w-2/6 md:w-1/6 ;
     }
     
     #nav_center {
-        @apply flex items-center justify-center w-4/6 ;
+        @apply flex items-center text-center justify-center w-2/6 md:w-4/6 ;
     }
     
     #nav_right {
-        @apply flex flex-row justify-between items-end w-1/6 ;
+        @apply flex flex-row justify-between items-end text-xs text-right w-2/6 sm:text-base md:w-1/6 ;
     }
 }
 
@@ -32,46 +36,77 @@ nav {
     @apply transition duration-200 ease-in-out text-yellow-100 hover:text-yellow-300 ;
 }
 
-body {
-    @apply flex flex-col  h-screen w-screen py-20 items-center bg-white text-gray-700 ;
+.notice {
+    @apply p-1 bg-yellow-500 text-white ;
 }
 
-.color_container {
-    @apply flex flex-col items-center w-4/5 px-10 min-h-screen bg-green-800 bg-opacity-50 shadow-md ;
-    // width: 80%;
+body {
+    @apply flex flex-col items-center w-screen px-5 py-28 min-h-screen bg-gradient-to-r from-green-200 to-blue-400 overflow-y-scroll ;
 
+    // BOUNTY CARDS
     .listings_card {
-        @apply flex flex-col justify-between w-64 h-96 bg-white text-gray-700 rounded-lg bg-opacity-50 shadow-lg ;
-
+        // @apply flex flex-col justify-between max-w-md h-96 bg-white text-gray-700 rounded-lg bg-opacity-50 shadow-lg ;
+        @apply rounded flex flex-col bg-white bg-opacity-50 justify-between shadow w-72 m-1 transition duration-200 ease-in-out hover:shadow-lg ;
         .card_title {
-            @apply w-full p-2 rounded-t-lg bg-opacity-70 text-center ;
+            @apply w-full p-2 font-bold rounded-t bg-opacity-70 text-center uppercase ;
         }
         .card_image {
-            @apply  h-32 object-contain ;
+            @apply  h-44 w-full object-cover ;
         }
         .card_date {
             @apply w-full p-2 ;
         }
         .card_description {
-            @apply w-full p-2 ;
+            @apply w-full p-2 text-justify overflow-y-hidden ;
         }
         .card_username {
             @apply w-full p-2 ;
         }
     }
-}
 
-.form_container {
-    @apply flex flex-col items-center px-10 py-10 bg-green-800 w-4/5 min-h-screen bg-opacity-50 shadow-md ;
-
-    .field {
-        @apply my-5 px-2 py-1 w-60 bg-white text-gray-700 rounded-lg shadow-md ;
+    // FORM CARD
+    .form_container {
+        @apply flex flex-col items-center justify-between px-10 py-5 bg-white w-96 bg-opacity-50 shadow-lg rounded ;
     
-        .input_field {
-            @apply w-full rounded-lg ;
+        .field {
+            @apply my-5 px-2 py-1 w-full bg-white text-gray-700 rounded-lg shadow-md ;
+        
+            .input_field {
+                @apply w-full rounded-lg ;
+            }
+        }
+
+        .actions {
+            @apply flex justify-center ;
         }
     }
 }
+
+.show_container {
+    @apply flex flex-col p-5 m-5 bg-white bg-opacity-50 shadow-md rounded sm:flex-row ;
+
+    .show_header {
+        @apply flex flex-col w-full sm:flex-col-reverse ;
+
+        .heading_box_1 {
+            @apply flex justify-center w-full ;
+
+            .show_image {
+                @apply w-full object-contain ;
+            }
+        }
+
+        .heading_box_2 {
+            @apply flex flex-col justify-center w-full ;
+        }
+    }
+
+    .show_body {
+        @apply p-2 mt-2 bg-white text-gray-700 bg-opacity-80 shadow-md text-justify rounded sm:mt-0 sm:ml-5 sm:p-10 ;
+    }
+
+}
+
 
 /*! purgecss end ignore */
 

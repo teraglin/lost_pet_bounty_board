@@ -7,7 +7,7 @@
         </div>
 
         <div id="nav_center" >
-            <h1>
+            <h1 class="border border-gray-700 px-1">
                 Lost Pet Bounty Board
             </h1>
         </div>
@@ -15,7 +15,8 @@
         <div id="nav_right" >
             <% if !user_signed_in? %>
                 <li>
-                    <%= link_to 'Register', user_registration_path, method: :create, class: 'transition duration-200 ease-in-out text-gray-700 hover:text-yellow-300' %>
+                    <%# <%= link_to 'Register', user_registration_path, method: :create, class: 'transition duration-200 ease-in-out text-gray-700 hover:text-yellow-300' %>
+                    <%= link_to "Register", new_user_registration_path, class: 'transition duration-200 ease-in-out text-gray-700 hover:text-yellow-300' %>
                 </li>
             <% else %>
                 <li>
