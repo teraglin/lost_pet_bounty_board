@@ -33,7 +33,7 @@
 
       <%# DESCRIPTION %>
       <p class="card_description">
-        <%= listing.description.first(50) %>
+        <em><%= listing.description.first(50) %></em>
         <% if listing.description.length > 30 %>
           <span>...</span>
         <% else %>
@@ -43,7 +43,7 @@
 
       <%# USERNAME %>
       <span class="card_username">
-        Posted By: <%= listing.user.username %>
+        Posted by <strong><%= listing.user.username %></strong>
       </span>
 
       <%# LINKS %>
