@@ -1,9 +1,11 @@
+
+
+/*! purgecss start ignore */
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 
-/*! purgecss start ignore */
-
 @import "components/buttons";
+
 h1 {
     @apply text-sm md:text-xl ;
 }
@@ -107,10 +109,9 @@ body {
 
 }
 
-
+@import "tailwindcss/utilities";
 /*! purgecss end ignore */
 
 
 
 
-@import "tailwindcss/utilities";
