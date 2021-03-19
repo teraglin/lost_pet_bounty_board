@@ -29,7 +29,13 @@
 
       <%# DATE %>
       <span class="card_date" >
-        Lost Date: <%= listing.lost_date %>
+        Lost Date: 
+          <% lost_year = listing.lost_date.strftime("%Y").to_i %>
+          <% if lost_year < (Time.now.year + 1) && lost_year > 1999 %>
+              <%= listing.lost_date.strftime(" %d/%m/%Y at %I:%M%p") %>
+          <% else %>
+            N/A
+          <% end %>
       </span>
 
       <%# DESCRIPTION %>
