@@ -2,7 +2,7 @@
     <ul class="nav_container">
         <div id="nav_left" >
             <li>
-                <%= link_to 'Home', listings_path, class: 'transition duration-200 ease-in-out text-gray-700 hover:text-yellow-300' %>
+                <%= link_to 'Home', listings_path, class: 'transition duration-200 ease-in-out text-gray-700 hover:text-yellow-500' %>
             </li>
         </div>
 
@@ -16,7 +16,7 @@
             <% if !user_signed_in? %>
                 <li>
                     <%# <%= link_to 'Register', user_registration_path, method: :create, class: 'transition duration-200 ease-in-out text-gray-700 hover:text-yellow-300' %>
-                    <%= link_to "Register", new_user_registration_path, class: 'transition duration-200 ease-in-out text-gray-700 hover:text-yellow-300' %>
+                    <%= link_to "Register", new_user_registration_path, class: 'transition duration-200 ease-in-out text-gray-700 hover:text-yellow-500' %>
                 </li>
             <% else %>
                 <li>
@@ -27,9 +27,9 @@
             <%# will have to change class: %>
             <li>
                 <% if user_signed_in? %>
-                    <%= link_to "Log Out", destroy_user_session_path, method: "delete", class: 'nav-link active transition duration-200 ease-in-out text-gray-700 hover:text-yellow-300' %>
+                    <%= link_to "Log Out", destroy_user_session_path, method: "delete", class: 'nav-link active transition duration-200 ease-in-out text-gray-700 hover:text-yellow-500' %>
                 <% else %>
-                    <%= link_to "Log In", new_user_session_path, method: :create, class: 'nav-link active transition duration-200 ease-in-out text-gray-700 hover:text-yellow-300' %>
+                    <%= link_to "Log In", new_user_session_path, method: :create, class: 'nav-link active transition duration-200 ease-in-out text-gray-700 hover:text-yellow-500' %>
                 <% end %>
             </li>
         </div>

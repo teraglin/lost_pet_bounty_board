@@ -10,6 +10,7 @@
 
 <div class="flex flex-row flex-wrap justify-center">
 
+  <% @listings = @listings.order(created_at: :desc) %>
 
   <% @listings.each do |listing| %>
     <div class="listings_card">
@@ -40,7 +41,6 @@
           <br>
         <% end %>
       </p>
-
       <%# USERNAME %>
       <span class="card_username">
         Posted by <strong><%= listing.user.username %></strong>
