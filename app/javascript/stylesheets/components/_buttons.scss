@@ -2,3 +2,15 @@
     @apply w-32 py-2 px-3 text-white rounded-lg transition duration-200 ease-in-out bg-gray-600 hover:bg-white hover:text-gray-700 hover:scale-100 ;
 
 }
+
+.btn_green {
+    @apply bg-green-700 hover:text-green-700 ;
+}
+
+.btn_red {
+    @apply bg-red-700 hover:text-red-700 ;
+}
+
+.btn_blue {
+    @apply bg-blue-700 hover:text-blue-700 ;
+}

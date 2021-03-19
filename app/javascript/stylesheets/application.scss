@@ -1,9 +1,11 @@
-@import "tailwindcss/base";
-@import "tailwindcss/components";
 
 /*! purgecss start ignore */
 
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+
 @import "components/buttons";
+
 h1 {
     @apply text-sm md:text-xl ;
 }
@@ -33,7 +35,7 @@ nav {
 }
 
 .link {
-    @apply transition duration-200 ease-in-out text-yellow-100 hover:text-yellow-300 ;
+    @apply transition duration-200 ease-in-out text-white hover:text-yellow-500 ;
 }
 
 .notice {
@@ -110,7 +112,6 @@ body {
 
 /*! purgecss end ignore */
 
-
-
-
 @import "tailwindcss/utilities";
+
+

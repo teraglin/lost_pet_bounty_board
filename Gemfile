@@ -57,3 +57,6 @@ gem 'devise'
 gem 'cloudinary'
 
 gem 'activestorage-cloudinary-service'
+
+#add timliness for datetime validation
+gem 'validates_timeliness', '~> 4.0', '>= 4.0.2'
