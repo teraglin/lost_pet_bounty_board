@@ -1,4 +1,4 @@
-# AidanKirvan_T2A2 - Lost Pet Bounty Board
+# Lost Pet Bounty Board
 
 <!-- A link (URL) to your deployed app (i.e. website) -->
 ##### Deployed App Link
